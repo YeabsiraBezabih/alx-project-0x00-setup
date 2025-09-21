@@ -8,7 +8,7 @@ const Landing: React.FC =  () => {
       <h1 className=" text-xl font-extralight">Landing Page</h1>
       <Card />
 
-      <Button title="Small Rounded" size="small" shape="rounded-sm" onClick={() => alert('Small Rounded Button Clicked')} />
+      <Button title="Small Rounded" styles={{ size: "small", shape: "rounded-sm" }} onClick={() => alert('Small Rounded Button Clicked')} />
      
      </div>
   )

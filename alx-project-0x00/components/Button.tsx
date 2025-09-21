@@ -6,22 +6,10 @@ Objective: Create a button component that accepts title and styles as an argumen
 import React from 'react';
 import { ButtonProps } from '@/interfaces';
 
-const Button: React.FC<ButtonProps> = ({ title, styles: { size, shape }, onClick }) => {
-  const sizeClasses = {
-    small: 'px-2 py-1 text-sm',
-    medium: 'px-3 py-1.5 text-base',
-    large: 'px-4 py-2 text-lg',
-  };
-
-  const shapeClasses = {
-    'rounded-sm': 'rounded-sm',
-    'rounded-md': 'rounded-md',
-    'rounded-full': 'rounded-full',
-  };
-
+const Button: React.FC<ButtonProps> = ({ title, styles, onClick }) => {
   return (
     <button
-      className={`bg-blue-500 text-white ${sizeClasses[size]} ${shapeClasses[shape]}`}
+      className={`bg-blue-500 text-white ${styles}`}
       onClick={onClick}
     >
       {title}
